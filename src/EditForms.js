@@ -9,6 +9,7 @@ import departments from "./DepartmentList";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 
 import Select from "react-select";
+import { useNavigate } from "react-router-dom";
 
 const PSG_COLLEGE =
   "PSG College of Technology (Autonomous), Peelamedu, Coimbatore District 641004";
@@ -40,7 +41,7 @@ const RegisterPageDetails = ({ switchPage }) => {
     phone: "",
   });
   
-
+const navigate = useNavigate();
   const selectStyles = {
     control: (baseStyles, state) => ({
       ...baseStyles,
@@ -68,7 +69,7 @@ const RegisterPageDetails = ({ switchPage }) => {
         />
       </div>
       <button
-        // onClick={() => navigate(-2)}
+        onClick={() => navigate("/")}
         className="flex hover:cursor-pointer group text-sm items-center space-x-2 lg:px-8"
       >
         <MdOutlineArrowBackIosNew size={12} />
